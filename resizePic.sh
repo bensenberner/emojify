@@ -1,14 +1,11 @@
 #!/bin/sh
 
-# TODO: test to make sure that the image is the right size before cropping
-WIDTH=$(identify -format "%w" test.png)
-HEIGHT=$(identify -format "%h" test.png)
+img="test.png"
+WIDTH=$(identify -format "%w" $img)
+HEIGHT=$(identify -format "%h" $img)
+EXTRAWIDTH=$(expr $WIDTH % 15)
+EXTRAHEIGHT=$(expr $HEIGHT % 15)
+WIDTH=$(($WIDTH-$EXTRAWIDTH))
+HEIGHT=$(($HEIGHT-$EXTRAHEIGHT))
 
-#EXTRAWIDTH=$(expr 15 % $WIDTH)
-#EXTRAHEIGHT=$(expr 15 % $HEIGHT)
-#echo $EXTRAWIDTH
-#for ((i=0; i<$WIDTH; i=$(($i+15)))); do
-    #for ((j=0; j<$HEIGHT; j=$(($j+15)))); do
-        #convert 222rightsize.png -crop 15x15+$i+$j test/pic$i$j
-    #done
-#done
+convert $img -resize "$WIDTH"x"$HEIGHT" $img
