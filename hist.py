@@ -1,7 +1,7 @@
 import cv2
 from scipy import spatial
-imagePath = "/Users/benjaminlerner/emoji/emoji-extractor/images/160x160/2.png"
-imagePath2="/Users/benjaminlerner/emoji/emoji-extractor/images/160x160/4.png"
+imagePath = "/Users/benjaminlerner/emoji/emoji-extractor/images/20x20/2.png"
+imagePath2="/Users/benjaminlerner/emoji/emoji-extractor/images/20x20/4.png"
 filename = "222large.png"
 filename2 = 'newpic'
 

@@ -7,6 +7,6 @@ HEIGHT=$(identify -format "%h" $img)
 
 for ((i=0; i<$WIDTH; i=$(($i+15)))); do
     for ((j=0; j<$HEIGHT; j=$(($j+15)))); do
-        convert $img -crop 15x15+$i+$j test/pic$i$j
+        convert $img -crop 20x20+$i+$j test/pic$i$j
     done
 done

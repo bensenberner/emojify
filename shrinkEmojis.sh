@@ -5,5 +5,5 @@
 cd '160x160'
 for img in *
 do
-    convert $img -resize 15x15 ../15x15/$img
+    convert $img -resize 20x20 ../20x20/$img
 done
