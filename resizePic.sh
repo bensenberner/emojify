@@ -1,6 +1,6 @@
 #!/bin/sh
 
-img="test.png"
+img="falcon.png"
 WIDTH=$(identify -format "%w" $img)
 HEIGHT=$(identify -format "%h" $img)
 EXTRAWIDTH=$(expr $WIDTH % 20)
