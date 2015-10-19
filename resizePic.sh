@@ -8,4 +8,4 @@ EXTRAHEIGHT=$(expr $HEIGHT % 20)
 WIDTH=$(($WIDTH-$EXTRAWIDTH))
 HEIGHT=$(($HEIGHT-$EXTRAHEIGHT))
 
-convert $img -resize "$WIDTH"x"$HEIGHT" $img
+convert $img -resize "$WIDTH"x"$HEIGHT"\! $img

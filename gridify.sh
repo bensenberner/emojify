@@ -6,10 +6,11 @@ WIDTH=$(identify -format "%w" $img)
 HEIGHT=$(identify -format "%h" $img)
 
 count=0
-for ((i=0; i<$WIDTH; i=$(($i+15)))); do
-    for ((j=0; j<$HEIGHT; j=$(($j+15)))); do
+for ((i=0; i<$HEIGHT; i=$(($i+20)))); do
+    for ((j=0; j<$WIDTH; j=$(($j+20)))); do
         ext=".png"
-        filename=test/pic$count$ext
+        num=`printf "%04d" $count`
+        filename=test/pic$num$ext
         convert $img -crop 20x20+$j+$i $filename
         count=$(($count+1))
     done
