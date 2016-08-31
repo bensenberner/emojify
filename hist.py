@@ -15,7 +15,6 @@ resultDir="/Users/benjaminlerner/emojify/result"
 # filename = "222large.png"
 # filename2 = 'newpic'
 
-
 def emojify(gridDir):
     for subdir, dirs, files in os.walk(gridDir):
         count = 0
